@@ -19,5 +19,22 @@ For more information on how to this works with other frontends/backends, head ov
 
 # Getting started
 
-> npm install, npm start, etc.
+## Prerequisites
+- Python 3.10
+- Node.js 18.5.0
 
+## Installation
+```shell
+# Install environment and dependencies
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r backend/requirements.txt
+npm --prefix=frontend install
+python backend/manage.py migrate
+
+# Build frontend
+npm --prefix=frontend run build
+
+# Run server
+python backend/manage.py runserver
+```
