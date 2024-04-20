@@ -13,6 +13,8 @@ import { ArticleComponent } from './article/article.component';
 import { ArticleMetaComponent } from './article/article-meta/article-meta.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ArticleCommentsComponent } from './article/article-comment/article-comments.component';
+import { ArticleTagsComponent } from './article/article-tags/article-tags.component';
+import { MarkdownModule } from "ngx-markdown";
 
 
 @NgModule({
@@ -26,13 +28,15 @@ import { ArticleCommentsComponent } from './article/article-comment/article-comm
     ArticleComponent,
     ArticleMetaComponent,
     ProfileComponent,
-    ArticleCommentsComponent
+    ArticleCommentsComponent,
+    ArticleTagsComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    MarkdownModule.forChild()
   ],
   exports: [
     LoginComponent,
